@@ -33,5 +33,7 @@ public class Main2Activity extends AppCompatActivity {
 
         UserBean userBean = new UserBean("张三",18);
         binding.setMuser(userBean);
+        UserBean userBean2 = new UserBean("李四",17);
+        binding.setMuser2(userBean2);
     }
 }

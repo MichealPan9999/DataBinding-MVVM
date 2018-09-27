@@ -8,6 +8,7 @@
         <import type="java.util.Map" />
 
         <import type="com.example.panzq.mvvm.bean.UserBean" />
+        <import type="com.example.panzq.mvvm.bean.UserBean" alias="UserBean2"/>
         <import type="android.view.View" />
 
         <!--泛型的支持会在编译时期报红线，但是是可以直接运行的
@@ -27,6 +28,9 @@
         <variable
             name="muser"
             type="UserBean" />
+        <variable
+            name="muser2"
+            type="UserBean2" />
     </data>
 
     <LinearLayout
@@ -72,6 +76,11 @@
             android:layout_height="wrap_content"
             android:text="@{muser.name}"
             android:visibility="@{((muser.age > 18) ? View.GONE:View.VISIBLE)}" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{muser2.name}"
+            android:visibility="@{((muser2.age > 18) ? View.GONE:View.VISIBLE)}" />
 
     </LinearLayout>
 </layout>
